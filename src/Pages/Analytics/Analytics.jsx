@@ -1,16 +1,19 @@
-import React,{useState} from 'react'
-import Modal from '../../Components/Common/Modal'
+import React from 'react'
+import BarChart from "../../Components/chart/BarChart";
+import PieChart from '../../Components/chart/PieChart';
 
 const Analytics = () => {
-  const [opens,setOpen]=useState(false)
   return (
     <div>
-      <h1 onClick={()=>setOpen(true)}>Analytics</h1> 
-      <Modal open={opens} closeModal={()=>setOpen(false)}>
-        <div>
-        <button>click</button>
-        </div>
-      </Modal>
+      <h1>Analytics</h1> 
+      <div className='flex items-center justify-center gap-6'>
+      <div className='w-[500px]'>
+        <BarChart />
+      </div>
+      <div className='w-[200px]'>
+        <PieChart />
+      </div>
+      </div>
     </div>
   )
 }
