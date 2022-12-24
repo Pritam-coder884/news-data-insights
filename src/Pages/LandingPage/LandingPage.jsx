@@ -157,11 +157,8 @@ function LandingPage() {
               </h3>
               <div className="h-[200px] w-[500px] text-justify sm:text-left sm:w-full sm:h-full">
                 <p className="text-[#333] text-xl font-semibold sm:mb-8">
-                  Seamlessly access world wide news and analysis of articles to
-                  grow your products and business effectively. Our APIs are easy
-                  to integrate and scale with robust backend technology. AI
-                  algorithms process and derive key events and entities from
-                  articles to derive business insights.
+                     Global Information for your business around the globe
+Seamlessly access world wide news and analysis of news articles to grow your business effectively. Our APIs are easy to integrate and scale with robust backend technology. AI algorithms process and extract key events,entities from news articles to derive useful business insights. We cover data from all the continents and trusted sources to ensure data quality remains intact.
                 </p>
               </div>
             </div>

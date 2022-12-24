@@ -3,7 +3,7 @@ import Typography from "../Typography";
 
 function FeatureCard({title,subTitle,logo}) {
   return (
-    <div className="h-[300px] w-[300px] border-2 flex items-center justify-center rounded-[16px] drop-shadow-md flex-col p-8 relative m-4 bg-[#ffff] mb-12">
+    <div className="h-[300px] w-[300px] border-2 flex items-center justify-center rounded-[16px] drop-shadow-md flex-col p-8 relative m-4 bg-[#ffff] mb-12 hover:bg-gray-600">
       <Typography
         text={title}
         extraClasses={"text-xl font-medium text-center "}
