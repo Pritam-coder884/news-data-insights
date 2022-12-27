@@ -141,7 +141,7 @@ const Footer = () => {
           extraClasses={
             "text-center mt-[32px]  font-medium text-[16px] text-[#FFFFFF] opacity-95"
           }
-          text={" © Copyright 2022 Lok App. All rights reserved."}
+          text={" © Copyright 2022 News Data Insight. All rights reserved."}
         />
       </div>
     </>

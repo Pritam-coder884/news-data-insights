@@ -260,6 +260,24 @@ block border-b-2 border-gray-300 focus:border-gray-700 hover:border-gray-700 bg-
                   </label>
                 </div>
               </div>
+              <div>
+                <div className=" mt-10 relative undefined">
+                  <input
+                    name="phone"
+                    id="phone"
+                    type="phone"
+                    className=" undefined relative peer h-10 w-full text-gray-700 placeholder-transparent bg-background-white placeholder-gray-400 outline-none  block border-b-2 border-gray-300 focus:border-gray-700 hover:border-gray-700 undefined"
+                    placeholder="Phone no."
+                    value=""
+                  />
+                  <label
+                    htmlFor="phone"
+                    className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-500 peer-focus:text-sm "
+                  >
+                    Phone no.
+                  </label>
+                </div>
+              </div>
               <button
                 type="button"
                 className="bg-primary border-none text-white false  h-[43px] w-[100%] text-base font-medium  rounded-[48px] h-[50px] w-[100%] text-md  my-4"
