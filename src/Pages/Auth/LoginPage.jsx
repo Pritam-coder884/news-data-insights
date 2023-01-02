@@ -8,13 +8,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../Redux/Slices/LoginSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../Assets/News_Data_Insights.svg";
 
 function LoginPage() {
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const data = useSelector((state)=>state?.loginUser)
+  const data = useSelector((state) => state?.loginUser);
   const {
     register,
     handleSubmit,
@@ -25,24 +26,24 @@ function LoginPage() {
     resolver: yupResolver(loginSchema),
   });
 
-  useEffect(()=>{
-    localStorage.removeItem('token')
-  },[])
+  useEffect(() => {
+    localStorage.removeItem("token");
+  }, []);
 
-  useEffect(()=>{
-      if(data?.status){
-        navigate('/homepage')
-      }
-  },[data?.status])
+  useEffect(() => {
+    if (data?.status) {
+      navigate("/homepage");
+    }
+  }, [data?.status]);
 
   const getStarted = (data) => {
-    console.log(data);
     const request = {
       password: data.password,
       email: data.email,
     };
     dispatch(loginUser(request));
   };
+
 
   return (
     <>
@@ -60,7 +61,11 @@ function LoginPage() {
           />
         </div> */}
         <div className="mt-3">
-          <img src={Logo} alt="logo" className="ml-12 sm:h-[4rem] h-[5rem] w-[20rem] object-cover" />
+          <img
+            src={Logo}
+            alt="logo"
+            className="ml-12 sm:h-[4rem] h-[5rem] w-[20rem] object-cover"
+          />
         </div>
 
         <Typography
@@ -88,11 +93,13 @@ function LoginPage() {
             name={"password"}
           />
 
-          <Typography
-            //action={() => navigate("/forgetpassword")}
-            text={"Forget Password?"}
-            extraClasses={" cursor-pointer text-primary flex justify-end "}
-          />
+          <div>
+            <Typography
+              //action={() => navigate("/forgetpassword")}
+              text={"Forget Password?"}
+              extraClasses={" cursor-pointer text-primary flex justify-end "}
+            />
+          </div>
           <Typography
             text={errors?.password?.message}
             extraClasses={"text-sm  text-error"}
@@ -177,6 +184,16 @@ function LoginPage() {
             extraClasses={"underline ml-1 cursor-pointer text-primary"}
           />
         </div>
+        <br />
+        <div className=" flex flex-row justify-center text-center  sm:flex-col">
+          <Typography text={"Want to see Home Page ?"} extraClasses={""} />
+          <Typography
+            action={() => navigate("/home")}
+            text={"Home"}
+            extraClasses={"underline ml-1 cursor-pointer text-primary"}
+          />
+        </div>
+        <br />
       </div>
     </>
   );

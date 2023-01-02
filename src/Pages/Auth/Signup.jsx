@@ -297,6 +297,16 @@ function Signup() {
             extraClasses={"underline ml-1 cursor-pointer text-primary"}
           />
         </div>
+        <br/>
+        <div className=" flex flex-row justify-center text-center  sm:flex-col">
+          <Typography text={"Want to see Home Page ?"} extraClasses={""} />
+          <Typography
+            action={() => navigate("/home")}
+            text={"Home"}
+            extraClasses={"underline ml-1 cursor-pointer text-primary"}
+          />
+        </div>
+        <br/>
       </div>
     </>
   );
